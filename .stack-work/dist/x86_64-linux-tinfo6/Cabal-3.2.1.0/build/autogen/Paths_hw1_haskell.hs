@@ -30,7 +30,7 @@ version = Version [0,1,0,0] []
 bindir, libdir, dynlibdir, datadir, libexecdir, sysconfdir :: FilePath
 
 bindir     = "/workspaces/cs114a-devcontainer-0.1.5.2/hw1/.stack-work/install/x86_64-linux-tinfo6/b8c14e9b510fe375c8204fa912b6b3f1b9feb26ecd9985cf8b33beadad498665/8.10.4/bin"
-libdir     = "/workspaces/cs114a-devcontainer-0.1.5.2/hw1/.stack-work/install/x86_64-linux-tinfo6/b8c14e9b510fe375c8204fa912b6b3f1b9feb26ecd9985cf8b33beadad498665/8.10.4/lib/x86_64-linux-ghc-8.10.4/hw1-haskell-0.1.0.0-612Zfo2LtRG6hhmWa28uOc"
+libdir     = "/workspaces/cs114a-devcontainer-0.1.5.2/hw1/.stack-work/install/x86_64-linux-tinfo6/b8c14e9b510fe375c8204fa912b6b3f1b9feb26ecd9985cf8b33beadad498665/8.10.4/lib/x86_64-linux-ghc-8.10.4/hw1-haskell-0.1.0.0-A70eIfT6Yz4DzxDGVF8YWO"
 dynlibdir  = "/workspaces/cs114a-devcontainer-0.1.5.2/hw1/.stack-work/install/x86_64-linux-tinfo6/b8c14e9b510fe375c8204fa912b6b3f1b9feb26ecd9985cf8b33beadad498665/8.10.4/lib/x86_64-linux-ghc-8.10.4"
 datadir    = "/workspaces/cs114a-devcontainer-0.1.5.2/hw1/.stack-work/install/x86_64-linux-tinfo6/b8c14e9b510fe375c8204fa912b6b3f1b9feb26ecd9985cf8b33beadad498665/8.10.4/share/x86_64-linux-ghc-8.10.4/hw1-haskell-0.1.0.0"
 libexecdir = "/workspaces/cs114a-devcontainer-0.1.5.2/hw1/.stack-work/install/x86_64-linux-tinfo6/b8c14e9b510fe375c8204fa912b6b3f1b9feb26ecd9985cf8b33beadad498665/8.10.4/libexec/x86_64-linux-ghc-8.10.4/hw1-haskell-0.1.0.0"

@@ -1,6 +1,6 @@
 import Test.Tasty
 import Common
-import Hw1 
+import Hw1
 
 main :: IO ()
 main = runTests [unit1]

@@ -29,28 +29,33 @@ import Prelude  hiding (replicate, sum, reverse)
 -- 36
 
 sumList :: [Int] -> Int
-sumList xs = error "TBD:sumList"
+sumList [] = 0
+sumList (x:xs) = x + sumList xs
 
-
--- | `digitsOfInt n` should return `[]` if `n` is not positive,
+--  `digitsOfInt n` should return `[]` if `n` is not positive,
 --    and otherwise returns the list of digits of `n` in the
 --    order in which they appear in `n`.
 --
 -- >>> digitsOfInt 3124
--- [3, 1, 2, 4]
+-- [3,1,2,4]
 --
 -- >>> digitsOfInt 352663
--- [3, 5, 2, 6, 6, 3]
+-- [3,5,2,6,6,3]
 
 digitsOfInt :: Int -> [Int]
-digitsOfInt n = error "TBD:digitsOfInt"
+digitsOfInt n
+    | n > 0  = digitsOfInt(div n 10) ++ [mod n 10]
+    | otherwise = []
+
+
+-- digitsOfInt n = error "TBD:digitsOfInt"
 
 
 -- | `digits n` returns the list of digits of `n`
 --
 -- >>> digits 31243
 -- [3,1,2,4,3]
---
+
 -- digits (-23422)
 -- [2, 3, 4, 2, 2]
 
@@ -73,13 +78,15 @@ digits n = digitsOfInt (abs n)
 -- NOTE: assume additivePersistence & digitalRoot are only called with positive numbers
 
 -- >>> additivePersistence 9876
--- 2
+-- 3
 
 -- >>> additivePersistence 99999
--- 2
+-- 9
 
 additivePersistence :: Int -> Int
-additivePersistence n = error "TBD"
+additivePersistence n
+    | n > 9 = additivePersistence (sumList( digits n ))
+    | otherwise = n
 
 -- | digitalRoot n is the digit obtained at the end of the sequence
 --   computing the additivePersistence
@@ -91,7 +98,9 @@ additivePersistence n = error "TBD"
 -- 9
 
 digitalRoot :: Int -> Int
-digitalRoot n = error "TBD"
+digitalRoot n
+    | n > 9 = digitalRoot (sumList( digits n ))
+    | otherwise = n
 
 
 -- | listReverse [x1,x2,...,xn] returns [xn,...,x2,x1]
