@@ -78,15 +78,15 @@ digits n = digitsOfInt (abs n)
 -- NOTE: assume additivePersistence & digitalRoot are only called with positive numbers
 
 -- >>> additivePersistence 9876
--- 3
+-- 2
 
 -- >>> additivePersistence 99999
--- 9
+-- 2
 
 additivePersistence :: Int -> Int
 additivePersistence n
-    | n > 9 = additivePersistence (sumList( digits n ))
-    | otherwise = n
+    | n < 10 = 0
+    | otherwise = 1 + additivePersistence (sumList( digits n ))
 
 -- | digitalRoot n is the digit obtained at the end of the sequence
 --   computing the additivePersistence
@@ -109,13 +109,14 @@ digitalRoot n
 -- []
 --
 -- >>> listReverse [1,2,3,4]
--- [4,3,2,1]
+-- NOW [4,3,2,1]
 --
 -- >>> listReverse ["i", "want", "to", "ride", "my", "bicycle"]
--- ["bicycle", "my", "ride", "to", "want", "i"]
+-- NOW ["bicycle","my","ride","to","want","i"]
 
 listReverse :: [a] -> [a]
-listReverse xs = error "TBD"
+listReverse [] = []
+listReverse (x:xs) = listReverse xs ++ [x]
 
 -- | In Haskell, a `String` is a simply a list of `Char`, that is:
 --
@@ -129,4 +130,4 @@ listReverse xs = error "TBD"
 -- False
 
 palindrome :: String -> Bool
-palindrome w = error "TBD"
+palindrome w = if listReverse w == w then True else False
